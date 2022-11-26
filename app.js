@@ -37,7 +37,9 @@ app.get('/api/v1/tours/:id', (req, res) => {
   });
 });
 app.patch('/api/v1/tours/:id',(req,res) => {
-  if(req.paramsid * >tourse.length)}
+  if(req.paramsid * >tourse.length){
+    return res.status(404).json({ status: 'fail', message: 'invalid' });
+  })}
 app.post('/api/v1/tours', (req, res) => {
   const newId = tours[tours.length - 1].id + 1;
   const newTours = Object.assign({ id: newId }, req.body);

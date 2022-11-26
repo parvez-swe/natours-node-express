@@ -36,6 +36,8 @@ app.get('/api/v1/tours/:id', (req, res) => {
     },
   });
 });
+//its 
+console.lof('')
 app.patch('/api/v1/tours/:id',(req,res) => {
   if(req.paramsid * >tourse.length){
     return res.status(404).json({ status: 'fail', message: 'invalid' });
